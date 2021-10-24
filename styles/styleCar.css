@@ -1,0 +1,71 @@
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+
+.carousel .carousel-item h4 {
+    font-size: 18px;
+    margin: 2px 0;
+}
+
+.carousel .thumb-wrapper {
+    text-align: left;
+}
+
+.carousel .thumb-content {
+    padding: 5px;
+    font-weight: 600;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 55px;
+    width: 14px;
+    background: none;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+
+.carousel-control-next i {
+    margin-right: -3px;
+}
+
+.carousel .item-price {
+    font-size: 14px;
+    padding: 0;
+    font-weight: 400;
+
+}
+
+.carousel .difference-price {
+    font-size: 14px;
+    padding: 2px 0;
+    font-weight: 400;
+    color: #109716;
+
+}
+
+.vl {
+    border-left: 1px solid gray;
+    height: 100px;
+}

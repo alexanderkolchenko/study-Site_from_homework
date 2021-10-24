@@ -1,0 +1,260 @@
+body {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: black !important;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #505DEB !important;
+
+}
+
+.nav1 {
+    font-weight: 400;
+    color: black !important;
+
+
+}
+
+.nav2 {
+    font-weight: 300;
+    color: black !important;
+
+
+}
+
+
+.line1 {
+    height: 10px;
+    background-color: #505DEB;
+    margin-top: 5px;
+    min-width: 800px;
+}
+
+.accordion1 {
+    min-width: 456px;
+
+}
+
+.accButton {
+    margin: 0;
+}
+
+
+
+.accordion-body1 {
+    height: 365px;
+    padding: 0;
+    /* margin-left: -1rem; */
+
+}
+
+.thumb-content {
+    padding: 0;
+    padding-left: 25px;
+
+}
+
+.item-price {
+    font-size: 14px;
+    padding: 0;
+    font-weight: 400;
+
+}
+
+.carousel {
+    min-width: 700px;
+}
+
+.carousel .difference-price {
+    font-size: 12px;
+    padding: 2px 0;
+    font-weight: 400;
+    color: #109716;
+
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.vl {
+    border-left: 1px solid gray;
+    height: 80px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    margin-right: 7%;
+
+
+    width: 20px;
+    height: 55px
+}
+
+.carousel-control-prev-icon {
+    margin-left: 14%;
+}
+
+.line2 a {
+    padding: 5px;
+    font-weight: 500;
+}
+
+.line2 a:hover {
+    background-color: #d2e2e2;
+}
+
+.InnerMyPortfolio {
+    padding: 0;
+    color: black;
+    background-color: #f9f9f9;
+}
+
+.balance,
+.cost {
+    padding-top: 15px;
+
+}
+
+.costMoneyPercent {
+    font-size: 14px;
+    font-weight: 600;
+    color: #109716;
+}
+
+.balanceMoney,
+.costMoney {
+    font-size: 24px;
+    color: #515151;
+    font-weight: 600;
+
+}
+
+
+
+.btn-my {
+    margin-top: 10px;
+}
+
+.myPortfolio {
+    height: auto;
+    padding-bottom: 17px;
+}
+
+.stocksList {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.accordion2 {
+    margin: auto;
+
+}
+
+
+
+.stocksListString {
+    font-size: 12px;
+    padding-left: 17px;
+}
+
+.stocksListString .colprice {
+    padding: 0;
+
+}
+
+@media (max-width: 992px) {
+    .stocksListString .colprice {
+        margin-left: -1rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .stocksListString .colprice {
+        margin-left: -1rem;
+    }
+
+}
+
+@media (max-width: 1132px) {
+    .nav4 {
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+
+.ticketsList {
+    color: #505DEB;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.priceChange,
+.priceChangePercent {
+    color: #109716;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.priceChangeList,
+.priceChangePercentList {
+    color: #4e4e4e;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.accordion-button::after {
+    display: none !important;
+}
+
+
+.priceTicketsList {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #e9e9e9;
+    height: 120px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.c1,
+.r2 {
+    height: 50px;
+}
+
+
+
+.footer .text-lg-end {
+    font-size: 14px;
+}
+
+svg {
+    font-size: 12px;
+    padding: 1px;
+}
+
+#msgByu {
+    font-size: 12px;
+}
