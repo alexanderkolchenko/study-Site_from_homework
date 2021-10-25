@@ -19,7 +19,7 @@ require "connection.php";
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
     <title>StocksMarket</title>
 </head>
 
@@ -62,19 +62,19 @@ require "connection.php";
                             <?php if (!isset($_SESSION['email'])) {
                             ?>
                                 <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Войти<img src="images/box-arrow-in-right.svg"></a>
-                            <?
+                            <?php
                             }
                             ?>
                             <?php if (isset($_SESSION['email'])) {
                             ?>
                                 <a href="exit.php">Выйти<img src="images/box-arrow-in-left.svg"></a>
 
-                            <?
+                            <?php
                             }
                             ?>
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
+                            <div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
@@ -92,7 +92,7 @@ require "connection.php";
                                 </div>
                             </div>
                             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-                                <div class="modal-dialog">
+                                <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel1">Регистрация</h5>

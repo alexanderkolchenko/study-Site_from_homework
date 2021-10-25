@@ -18,6 +18,7 @@ a:visited {
 hr {
     width: 100%;
 }
+
 a:hover {
     color: #505DEB !important;
 
@@ -61,7 +62,6 @@ a:hover {
 .accordion-body1 {
     height: 365px;
     padding: 0;
-    /* margin-left: -1rem; */
 
 }
 
@@ -177,21 +177,21 @@ h4 {
 
 }
 
-@media (max-width: 1132px) {
+@media all and (max-width: 1132px) {
     .nav4 {
         font-size: 13px;
     }
 
 }
 
-@media (max-width: 992px) {
+@media all and (max-width: 992px) {
     .stocksListString .colprice {
         margin-left: -1rem;
     }
 
 }
 
-@media (max-width: 576px) {
+@media all and  (max-width: 576px) {
     .stocksListString .colprice {
         margin-left: -1rem;
 
@@ -203,7 +203,7 @@ h4 {
 
 }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
     .thumb-content:nth-child(even) {
 
         display: none;
@@ -214,61 +214,73 @@ h4 {
 .logo {
     width: 216px;
 }
-@media screen and (max-width: 576px) {
+
+@media all and (max-width: 576px) {
     .logo {
         width: 176px;
     }
 }
-@media screen and (max-width: 414px) {
+
+@media all and (max-width: 414px) {
     .logo {
-        
+
         width: 170px;
     }
 }
-
-/* 
-@media screen and (max-width: 576px) {
-    body {        
-        min-width: 576px;
-    }
-}*/
-@media screen and (max-width: 360px) {
-    body {        
+@media all and (max-width: 360px) {
+    body {
         width: 456px;
-        
-
     }
-    hr{
+
+    hr {
         width: 105%;
     }
-    .InnerMyPortfolio  {
+
+    .InnerMyPortfolio {
         margin-left: 1rem;
     }
-    .myPortfolio  {
+
+    .myPortfolio {
         margin-left: 1rem;
-        
+
     }
 
     .stocksList {
         margin-left: 0;
-      
-        width:90%;
-    }
-}
- 
-/* @media screen and (max-width: 414px) {
-    .text-body {        
-        width: 700px;
-    }
-}
- */
 
-.none3, .none4 {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 414px) {
+    body {
+        width: 456px;
+    }
+
+    hr {
+        width: 105%;
+    }
+
+    .InnerMyPortfolio {
+        margin-left: 1rem;
+    }
+
+    .myPortfolio {
+        margin-left: 1rem;
+
+    }
+
+    .stocksList {
+        margin-left: 0;
+
+        width: 90%;
+    }
+}
+
+.none3,
+.none4 {
     display: none;
 }
-
-
-
 
 
 .ticketsList {
