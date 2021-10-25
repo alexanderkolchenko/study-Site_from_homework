@@ -15,10 +15,15 @@ a:visited {
     color: black;
 }
 
+hr {
+    width: 100%;
+}
 a:hover {
     color: #505DEB !important;
 
 }
+
+
 
 .nav1 {
     font-weight: 400;
@@ -39,7 +44,7 @@ a:hover {
     height: 10px;
     background-color: #505DEB;
     margin-top: 5px;
-    min-width: 800px;
+    min-width: 456px;
 }
 
 .accordion1 {
@@ -74,7 +79,7 @@ a:hover {
 }
 
 .carousel {
-    min-width: 700px;
+    min-width: 456px;
 }
 
 .carousel .difference-price {
@@ -141,10 +146,7 @@ h4 {
     font-size: 24px;
     color: #515151;
     font-weight: 600;
-
 }
-
-
 
 .btn-my {
     margin-top: 10px;
@@ -165,8 +167,6 @@ h4 {
 
 }
 
-
-
 .stocksListString {
     font-size: 12px;
     padding-left: 17px;
@@ -174,6 +174,13 @@ h4 {
 
 .stocksListString .colprice {
     padding: 0;
+
+}
+
+@media (max-width: 1132px) {
+    .nav4 {
+        font-size: 13px;
+    }
 
 }
 
@@ -187,16 +194,75 @@ h4 {
 @media (max-width: 576px) {
     .stocksListString .colprice {
         margin-left: -1rem;
+
+    }
+
+    .line1 {
+        margin-left: 5%;
     }
 
 }
 
-@media (max-width: 1132px) {
-    .nav4 {
-        font-size: 13px;
+@media screen and (max-width: 768px) {
+    .thumb-content:nth-child(even) {
+
+        display: none;
     }
 
 }
+
+.logo {
+    width: 216px;
+}
+@media screen and (max-width: 576px) {
+    .logo {
+        width: 176px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .logo {
+        
+        width: 170px;
+    }
+}
+
+/* 
+@media screen and (max-width: 576px) {
+    body {        
+        min-width: 576px;
+    }
+}*/
+@media screen and (max-width: 360px) {
+    body {        
+        width: 456px;
+        
+
+    }
+    hr{
+        width: 105%;
+    }
+    .InnerMyPortfolio  {
+        margin-left: 1rem;
+    }
+    .myPortfolio  {
+        margin-left: 1rem;
+        
+    }
+
+    .stocksList {
+        margin-left: 0;
+      
+        width:90%;
+    }
+}
+ 
+/* @media screen and (max-width: 414px) {
+    .text-body {        
+        width: 700px;
+    }
+}
+ */
+
 
 
 

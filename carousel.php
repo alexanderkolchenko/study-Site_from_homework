@@ -1,7 +1,7 @@
 <div class="carousel-item active">
     <div class="row justify-content-center">
-        <div class="col-10">
-            <div class="row justify-content-md-center">
+        <div class="col-10 col-sm-10">
+            <div class="row rowsForItem justify-content-md-center">
                 <?php
                 $symbolIndex = [
                     "S&P 500" => "^GSPC",

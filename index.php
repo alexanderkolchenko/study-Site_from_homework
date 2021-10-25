@@ -26,10 +26,10 @@ require "connection.php";
 <body class="text-body">
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-10">
+        <div class=" col-10">
             <nav class=" navbar bg-white navbar-expand-lg navbar-light bg-light">
                 <div class=" container"> 
-                    <a href="#"><img style="width: 216px; height: auto;" src="images/logo.png"></a>
+                    <a href="#"><img class = "logo" src="images/logo.png"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -160,7 +160,7 @@ require "connection.php";
         <div class="col-1"></div>
     </div>
     <div class="container px-5 px-sm-5">
-        <div class="row justify-content-md-center px-0">
+        <div class="row  justify-content-md-center px-0">
 
             <form class="d-flex col-md-10 my-3 px-0">
                 <input class="w-50 form-control bg-light border-secondary me-2" type="search" placeholder="Поиск..." aria-label="Search">
