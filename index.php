@@ -221,17 +221,11 @@ require "connection.php";
                     if (isset($_SESSION['email'])) include "portfolio.php";
                     else {
                     ?>
-
                         <div class="container text-center my-5 border">
                             <button type="button" class="btn my-3 btn-warning btn-lg" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal1">Открыть счет</button>
                             <div class="text-center">Если у вас уже есть счет, войдите в <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary" href="#">личный кабинет</a></div>
 
                         </div>
-
-
-
-
-
                     <?php
                     }
                     ?>

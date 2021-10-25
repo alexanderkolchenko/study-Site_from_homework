@@ -263,6 +263,9 @@ h4 {
 }
  */
 
+.none3, .none4 {
+    display: none;
+}
 
 
 
@@ -291,6 +294,8 @@ h4 {
 .accordion-button::after {
     display: none !important;
 }
+
+
 
 
 .priceTicketsList {

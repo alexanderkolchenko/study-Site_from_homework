@@ -42,7 +42,7 @@ if (isset($_POST["ticker"])) {
             $resp = [
                 "status" => true,
                 "ticker" => $ticker,
-                "quantity" => $quantity,                
+                "quantity" => $quantity,
             ];
             echo json_encode($resp);
             exit;
@@ -351,12 +351,18 @@ foreach ($c as $k => $v) {
                                     var quantity = $(this).parent().parent().find('.stocksSellInput').val();
                                     var price = +$(this).parent().parent().find('.priceStocksSellInput').val().substring(1);
                                     var newPrice = +$(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html().substring(1)
-                                    newPrice = newPrice.toFixed(2)
-                                    $(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html('$' + (newPrice - price).toFixed(2));
+                                    newPrice1 = newPrice.toFixed(2)
+                                    var valueOfPrice = $(this).parent().parent().parent().parent().parent().find('.priceTicketsList');
+
+
+                                    /* $(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html('$' + (newPrice1 - price).toFixed(2));*/
+
                                     var q = $(this).parent().parent().parent().parent().parent().find('.priceChangeList')
                                     $(this).parent().parent().find('.stocksSellInput').attr('max', (+q.html() - quantity))
-
+                                    var price = +$(this).parent().parent().find('.priceStocksSellInput').val().substring(1);
+                                    /* var newPrice = +$(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html().substring(1)*/
                                     if (quantity > 0) {
+
                                         $.ajax({
                                             url: 'portfolio.php',
                                             type: 'POST',
@@ -369,6 +375,9 @@ foreach ($c as $k => $v) {
                                             },
                                             success(data) {
                                                 if (data.status) {
+
+                                                    $('.wrongStocks').addClass('none4');
+                                                    $('.msgNoStocks').addClass('none3').html(data.message);
                                                     var balance = +$('#balanceMoney').html();
                                                     $('#balanceMoney').html((balance + price).toFixed(2));
                                                     q = q.html(q.html() - quantity)
@@ -376,16 +385,24 @@ foreach ($c as $k => $v) {
                                                     $('#costMoney').html('$' + sub.toFixed(2))
                                                     $('.priceStocksSellInput').val('')
                                                     $('.stocksSellInput').val('')
+                                                    valueOfPrice.html('$' + (newPrice1 - price).toFixed(2))
                                                     countBalance()
+
 
                                                     if (data.isset == false) {
                                                         $(idDel).remove()
                                                     }
+                                                } else {
+                                                    $('.msgNoStocks').removeClass('none3').html(data.message);
                                                 }
                                             }
                                         });
+                                    } else {
+                                        $('.wrongStocks').removeClass('none4');
+
                                     }
                                 })
+
                             }
                             $('#reload').load('portfolio.php #accordionFlushExample1').one('click', newEvent);
                         }

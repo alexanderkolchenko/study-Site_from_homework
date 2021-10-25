@@ -213,11 +213,16 @@ if (isset($_POST['ticker'])) {
                         <div id="collapse<?php echo $id ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $id ?>" data-bs-parent="#accordionFlushExample1">
                             <div class="  d-grid gap-2 col-lg-6 col-sm-2 col-2 py-1 col-md-2"> <button type="button" id="openFormSell<?php echo $id ?>" class=" openFormSell btn ms-1 btn-warning btn-sm">Продать</button></div>
                             </span>
+                            <div class="msgNoStocks mb-3 border-0 alert px-1 py-1 fs-6 mx-1 my-2 alert-danger text-center none3"></div>
+                            <div class="wrongStocks mb-3 border-0 alert px-1 py-1 fs-6 mx-1 my-2 alert-danger text-center none4">Неверное количество</div>
                             <div class="  msgSellStocks none2 px-0">
                                 <form class="container mb-3 d-inline msgSellStocks border-0 alert p-0 px-1 my-auto none2 ">
                                     <div class="d-flex justify-content-around container-fluid px-1">
+
+
                                         <input type="text" id="priceStocksSellInput<?php echo $id ?>" min="1" readonly class="border border-light  col-5  border-2 priceStocksSellInput text-end my-1 " placeholder="$цена">
                                         <input type="number" id="stocksSellInput<?php echo $id ?>" min="1" max="<?php echo $quantity  ?>" class=" stocksSellInput  col-5 text-end my-1 " placeholder="кол-во">
+
                                     </div>
                                     <div class="container-fluid d-flex px-1 justify-content-around">
                                         <button type="submit" class=" btnSellConfirm btn btn-sm btn-outline-success my-1 col-5  mx-1 text-center">Ок</button>
@@ -347,7 +352,7 @@ if (isset($_POST['ticker'])) {
             actSumm += +i.innerHTML.substring(1)
         }
         $('#costMoney').html('$' + (actSumm.toFixed(2)))
-       
+
         if (actSumm == 0) {
             $('#nothing').removeClass('none2');
         }
@@ -357,19 +362,25 @@ if (isset($_POST['ticker'])) {
     countBalance()
     //продажа
 
+
+
     $('.btnSellConfirm').click(function(e) {
         e.preventDefault();
         var quantity = $(this).parent().parent().find('.stocksSellInput').val();
         var price = +$(this).parent().parent().find('.priceStocksSellInput').val().substring(1);
         var newPrice = +$(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html().substring(1)
-        newPrice = newPrice.toFixed(2)
-        $(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html('$' + (newPrice - price).toFixed(2));
+        newPrice1 = newPrice.toFixed(2)
+        var valueOfPrice = $(this).parent().parent().parent().parent().parent().find('.priceTicketsList');
+
+
+        /* $(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html('$' + (newPrice1 - price).toFixed(2));*/
+
         var q = $(this).parent().parent().parent().parent().parent().find('.priceChangeList')
         $(this).parent().parent().find('.stocksSellInput').attr('max', (+q.html() - quantity))
-
-
-
+        var price = +$(this).parent().parent().find('.priceStocksSellInput').val().substring(1);
+        /* var newPrice = +$(this).parent().parent().parent().parent().parent().find('.priceTicketsList').html().substring(1)*/
         if (quantity > 0) {
+
             $.ajax({
                 url: 'portfolio.php',
                 type: 'POST',
@@ -383,6 +394,8 @@ if (isset($_POST['ticker'])) {
                 success(data) {
                     if (data.status) {
 
+                        $('.wrongStocks').addClass('none4');
+                        $('.msgNoStocks').addClass('none3').html(data.message);
                         var balance = +$('#balanceMoney').html();
                         $('#balanceMoney').html((balance + price).toFixed(2));
                         q = q.html(q.html() - quantity)
@@ -390,15 +403,26 @@ if (isset($_POST['ticker'])) {
                         $('#costMoney').html('$' + sub.toFixed(2))
                         $('.priceStocksSellInput').val('')
                         $('.stocksSellInput').val('')
+                        valueOfPrice.html('$' + (newPrice1 - price).toFixed(2))
                         countBalance()
 
 
                         if (data.isset == false) {
                             $(idDel).remove()
                         }
+                    } else {
+                        $('.msgNoStocks').removeClass('none3').html(data.message);
                     }
                 }
             });
+        } else {
+            $('.wrongStocks').removeClass('none4');
+
         }
+    })
+
+    $('.portButton').click(function() {
+        $('.wrongStocks').addClass('none4');
+        $('.msgNoStocks').addClass('none3');
     })
 </script>
